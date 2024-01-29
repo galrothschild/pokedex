@@ -5,8 +5,8 @@ document.querySelector(".btn-next")?.addEventListener("click", () => {
     fetchPokemon(pokemonID);
 });
 document.querySelector(".btn-previous")?.addEventListener("click", () => {
-    pokemonID--;
-    fetchPokemon(pokemonID);
+    pokemonID > 0 ? pokemonID-- : pokemonID =
+        fetchPokemon(pokemonID);
 });
 
 async function fetchPokemon(id: number) {
