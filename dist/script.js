@@ -1,12 +1,12 @@
 "use strict";
 let pokemonID = 1;
 document.querySelector(".btn-next")?.addEventListener("click", () => {
-    pokemonID++;
+    pokemonID < 1302 ? pokemonID++ : pokemonID = 1;
     fetchPokemon(pokemonID);
 });
 document.querySelector(".btn-previous")?.addEventListener("click", () => {
-    pokemonID > 0 ? pokemonID-- : pokemonID =
-        fetchPokemon(pokemonID);
+    pokemonID > 0 ? pokemonID-- : pokemonID = 1302;
+    fetchPokemon(pokemonID);
 });
 async function fetchPokemon(id) {
     try {
